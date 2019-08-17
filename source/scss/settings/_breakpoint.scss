@@ -1,0 +1,30 @@
+/* メディアクエリ */
+$mq-breakpoint-small: 769px;
+$mq-breakpoint-tab: 1020px;
+$mq-breakpoint-xsmall: 321px;
+$mq-breakpoint-large: 1280px;
+
+@mixin mq-xsmall {
+  @media (max-width: #{$mq-breakpoint-xsmall - 1}) {
+    @content;
+  }
+}
+
+@mixin mq-small {
+  @media (max-width: #{$mq-breakpoint-small - 1}) {
+    @content;
+  }
+}
+
+@mixin mq-tab {
+  @media (max-width: #{$mq-breakpoint-tab - 1}) {
+    @content;
+  }
+}
+
+@mixin mq-large {
+  @media (min-width: #{$mq-breakpoint-large - 1}) {
+    @content;
+  }
+}
+/* end */
